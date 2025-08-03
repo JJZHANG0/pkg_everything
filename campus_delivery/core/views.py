@@ -7,7 +7,7 @@ from .serializers import DeliveryOrderSerializer, RobotSerializer, UserSerialize
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from django.contrib.auth import get_user_model
-from .utils import generate_signed_payload, generate_qr_code
+from .utils import generate_signed_payload, generate_qr_code, generate_simple_qr_code
 from rest_framework.permissions import IsAdminUser, AllowAny
 from rest_framework.views import APIView
 from rest_framework.parsers import MultiPartParser
