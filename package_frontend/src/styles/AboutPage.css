@@ -1,0 +1,229 @@
+.about {
+  font-family: sans-serif;
+}
+
+/* === Hero Section === */
+.about-hero {
+  background-color: #f4f4f5;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* === Our Story Section === */
+.about-story {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4rem 10%;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.story-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.story-text h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.story-text p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.story-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.image-placeholder {
+  background-color: #e5e7eb;
+  border-radius: 10px;
+  width: 100%;
+  padding-top: 66.6%; /* 3:2 aspect ratio */
+}
+
+.ceo-image {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* === Our Values Section === */
+.about-values {
+  background-color: #f4f4f5;
+  padding: 4rem 10%;
+  text-align: center;
+}
+
+.about-values h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.about-values > p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.value-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.value-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 240px;
+  max-width: 300px;
+  box-shadow: 0 0 0 1px #e5e7eb;
+  text-align: center;
+}
+
+.value-card .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* === Meet the Team === */
+.about-team {
+  padding: 4rem 10%;
+  text-align: center;
+}
+
+.about-team h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.about-team > p {
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 200px;
+}
+
+.avatar-placeholder {
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+}
+
+.team-member h4 {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.team-member p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* === CTA Section === */
+.about-cta {
+  background-color: #111827;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.about-cta p {
+  font-size: 1rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-solid {
+  background-color: white;
+  color: black;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-solid:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #fff;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: #ffffff10;
+}

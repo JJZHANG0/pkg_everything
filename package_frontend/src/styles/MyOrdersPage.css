@@ -1,0 +1,100 @@
+.orders-wrapper {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4rem;
+}
+
+.orders-content {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  flex: 1;
+}
+
+.orders-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.orders-content p {
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+/* 表头 */
+.orders-table-header {
+  display: grid;
+  grid-template-columns: 180px 160px 140px 180px 180px 80px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #6b7280;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* 单条订单 */
+.orders-table-row {
+  display: grid;
+  grid-template-columns: 180px 160px 140px 180px 180px 80px;
+  background: #ffffff;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.orders-table-row:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* 状态标签 */
+.status-pill {
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  background-color: #e5e7eb;
+  color: #374151;
+  text-align: center;
+}
+
+.status-pill.PENDING {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.status-pill.DELIVERED {
+  background-color: #dcfce7;
+  color: #059669;
+}
+
+.status-pill.IN_TRANSIT {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.status-pill.PICKUP {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+/* View 按钮 */
+.orders-table-row button {
+  font-weight: 500;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.orders-table-row button:hover {
+  color: #1d4ed8;
+}

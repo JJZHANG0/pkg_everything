@@ -1,0 +1,96 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.login-box {
+  width: 360px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  text-align: center;
+  background: white;
+  border: 1px solid #eee;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  text-align: left;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.password-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  font-size: 0.8rem;
+  color: #555;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  background-color: #111;
+  color: white;
+  font-weight: 600;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 1rem;
+}

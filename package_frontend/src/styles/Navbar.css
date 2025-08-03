@@ -1,0 +1,97 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 4%;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  font-family: sans-serif;
+  flex-wrap: wrap;
+}
+
+.nav-left {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 0.95rem;
+  color: #555;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-center li {
+  cursor: pointer;
+}
+
+.nav-center .active {
+  font-weight: 600;
+  color: black;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: black;                  /* ✅ 显式设置文字颜色 */
+}
+
+.btn-solid {
+  background: black;
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: #f0f0f0;           /* ✅ 鼠标悬浮时加浅灰背景 */
+  border-color: #aaa;
+}
+
+.user-tag {
+  margin-right: 1rem;
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* 保证 Welcome 与 Logout 按钮一行 */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* 控制 Welcome 和按钮间距 */
+  white-space: nowrap;
+}
+
+.user-welcome {
+  font-size: 0.95rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; /* 👋 和文本之间的间距 */
+}
+
+.nav-center li {
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s ease;
+}
+
+.nav-center li.active {
+  font-weight: 600;
+  color: #111827;
+}

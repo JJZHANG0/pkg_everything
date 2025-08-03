@@ -1,0 +1,162 @@
+/* === 页面布局 === */
+.order-wrapper {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === 步骤指示条 === */
+.step-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 2rem 0;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #9ca3af;
+}
+
+.step-indicator span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: default;
+}
+
+.step-indicator span.active {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* === 步骤卡片容器 === */
+.step-container {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto 2rem;
+  padding: 2.5rem 3rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step-container h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.step-container p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.step-container label {
+  font-weight: 500;
+  margin-top: 1rem;
+  display: block;
+}
+
+.step-container input,
+.step-container select,
+.step-container textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* === 单选按钮组 === */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* 横向并排布局 */
+.radio-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.radio-row label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* === 按钮区域 === */
+.step-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-solid {
+  background-color: #111827;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-solid:hover {
+  background-color: #1f2937;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #111827;
+  padding: 0.8rem 2rem;
+  border: 1px solid #111827;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: #f3f4f6;
+}
+
+/* === Footer 样式让其永远贴底 === */
+.footer {
+  margin-top: auto;
+  background-color: #f9fafb;
+  padding: 2rem;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+
+.step-container img {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 12px;
+}
+
+

@@ -1,0 +1,307 @@
+.network-monitor-page {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.monitor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.monitor-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 28px;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.controls button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: #0056b3;
+}
+
+/* 统计卡片 */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  color: #666;
+  font-weight: 500;
+}
+
+/* 活跃连接 */
+.active-connections {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.active-connections h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.connections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.connection-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #28a745;
+}
+
+.connection-ip {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.connection-user {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.connection-time {
+  color: #999;
+  font-size: 12px;
+}
+
+/* 过滤器 */
+.filters {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.filters h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-controls select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+  min-width: 150px;
+}
+
+/* 日志列表 */
+.logs-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logs-section h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.logs-container {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.log-item {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #f8f9fa;
+  transition: border-color 0.3s;
+}
+
+.log-item:hover {
+  border-color: #007bff;
+}
+
+.log-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.log-icon {
+  font-size: 18px;
+}
+
+.log-level {
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.1);
+  font-size: 12px;
+}
+
+.log-type {
+  background: #e9ecef;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+.log-time {
+  color: #999;
+  font-size: 12px;
+  margin-left: auto;
+}
+
+.log-message {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.log-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.log-user, .log-ip, .log-method, .log-time-taken, .log-status {
+  color: #666;
+}
+
+.log-data {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f1f3f4;
+  border-radius: 5px;
+  border-left: 3px solid #007bff;
+}
+
+.log-data strong {
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.log-data pre {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* 加载状态 */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .network-monitor-page {
+    padding: 10px;
+  }
+  
+  .monitor-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .controls {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .filter-controls {
+    flex-direction: column;
+  }
+  
+  .filter-controls select {
+    width: 100%;
+  }
+  
+  .log-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .log-time {
+    margin-left: 0;
+  }
+} 
