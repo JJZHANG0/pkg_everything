@@ -1,0 +1,81 @@
+2025-08-03 12:39:43,316 - INFO - server listening on 0.0.0.0:8001
+2025-08-03 12:39:52,335 - INFO - connection open
+2025-08-03 12:39:52,335 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/asyncio/server.py", line 374, in conn_handler
+    await self.handler(connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SimpleWebSocketServer.handle_robot_connection() missing 1 required positional argument: 'path'
+2025-08-03 12:43:39,253 - INFO - server listening on 0.0.0.0:8001
+2025-08-03 12:45:43,995 - INFO - connection open
+2025-08-03 12:45:43,995 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/asyncio/server.py", line 374, in conn_handler
+    await self.handler(connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SimpleWebSocketServer.handle_robot_connection() missing 1 required positional argument: 'path'
+2025-08-03 12:45:50,646 - INFO - connection open
+2025-08-03 12:45:50,646 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/asyncio/server.py", line 374, in conn_handler
+    await self.handler(connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SimpleWebSocketServer.handle_robot_connection() missing 1 required positional argument: 'path'
+2025-08-03 12:47:44,675 - INFO - connection open
+2025-08-03 12:47:44,676 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/asyncio/server.py", line 374, in conn_handler
+    await self.handler(connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SimpleWebSocketServer.handle_robot_connection() missing 1 required positional argument: 'path'
+2025-08-03 12:50:29,044 - INFO - server listening on 0.0.0.0:8001
+2025-08-03 12:50:33,351 - INFO - connection open
+2025-08-03 12:50:33,351 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/asyncio/server.py", line 374, in conn_handler
+    await self.handler(connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SimpleWebSocketServer.handle_robot_connection() missing 1 required positional argument: 'path'
+2025-08-03 12:51:40,150 - INFO - connection open
+2025-08-03 12:51:40,150 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/asyncio/server.py", line 374, in conn_handler
+    await self.handler(connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: SimpleWebSocketServer.handle_robot_connection() missing 1 required positional argument: 'path'
+2025-08-03 13:00:58,331 - INFO - server listening on 0.0.0.0:8001
+2025-08-03 13:01:33,092 - INFO - connection open
+2025-08-03 13:01:33,093 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/asyncio/server.py", line 374, in conn_handler
+    await self.handler(connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_robot_connection() missing 1 required positional argument: 'path'
+2025-08-03 13:12:29,337 - INFO - connection open
+2025-08-03 13:12:29,340 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/asyncio/server.py", line 374, in conn_handler
+    await self.handler(connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_robot_connection() missing 1 required positional argument: 'path'
+2025-08-03 13:14:29,422 - INFO - server listening on 0.0.0.0:8001
+2025-08-03 13:14:37,400 - INFO - connection open
+2025-08-03 13:14:37,403 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/asyncio/server.py", line 374, in conn_handler
+    await self.handler(connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_robot_connection() missing 1 required positional argument: 'path'
+2025-08-03 13:16:28,222 - INFO - server listening on 0.0.0.0:8001
+2025-08-03 13:16:33,045 - INFO - connection open
+2025-08-03 13:16:33,045 - ERROR - ❌ 处理连接时出错: 'ServerConnection' object has no attribute 'path'
+2025-08-03 13:17:14,341 - INFO - connection open
+2025-08-03 13:17:14,341 - ERROR - ❌ 处理连接时出错: 'ServerConnection' object has no attribute 'path'
+2025-08-03 13:18:55,330 - INFO - server listening on 0.0.0.0:8001
+2025-08-03 13:18:59,768 - INFO - connection open
+2025-08-03 13:18:59,768 - ERROR - connection handler failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/websockets/asyncio/server.py", line 374, in conn_handler
+    await self.handler(connection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: handle_robot_connection() missing 1 required positional argument: 'path'

@@ -1,0 +1,62 @@
+[
+  {
+    "test": "认证",
+    "status": "PASS",
+    "details": "JWT token获取成功",
+    "timestamp": "16:03:04"
+  },
+  {
+    "test": "机器人状态API",
+    "status": "PASS",
+    "details": "状态: LOADING, 位置: Warehouse",
+    "timestamp": "16:03:05"
+  },
+  {
+    "test": "机器人控制API-开门",
+    "status": "PASS",
+    "details": "机器人 Robot-001 开门成功",
+    "timestamp": "16:03:06"
+  },
+  {
+    "test": "机器人控制API-关门",
+    "status": "PASS",
+    "details": "机器人 Robot-001 关门成功",
+    "timestamp": "16:03:07"
+  },
+  {
+    "test": "机器人状态更新API",
+    "status": "PASS",
+    "details": "状态更新成功",
+    "timestamp": "16:03:09"
+  },
+  {
+    "test": "二维码等待API",
+    "status": "PASS",
+    "details": "订单 1 开始等待二维码扫描",
+    "timestamp": "16:03:10"
+  },
+  {
+    "test": "二维码扫描API",
+    "status": "PASS",
+    "details": "订单 1 二维码扫描成功",
+    "timestamp": "16:03:11"
+  },
+  {
+    "test": "自动返航API",
+    "status": "PASS",
+    "details": "机器人 Robot-001 开始自动返航",
+    "timestamp": "16:03:12"
+  },
+  {
+    "test": "系统日志API",
+    "status": "FAIL",
+    "details": "HTTP 500",
+    "timestamp": "16:03:13"
+  },
+  {
+    "test": "日志统计API",
+    "status": "PASS",
+    "details": "总日志数: 6",
+    "timestamp": "16:03:14"
+  }
+]

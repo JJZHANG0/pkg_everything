@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Aa123456
+      MYSQL_DATABASE: package
+#      MYSQL_USER: root
+#      MYSQL_PASSWORD: Aa123456
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  backend:
+    build: ../campus_delivery
+    container_name: drf_backend
+    volumes:
+      - ../campus_delivery:/app
+      - ../logs:/app/logs
+    ports:
+      - "8000:8000"
+    environment:
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: ${DB_HOST}
+    depends_on:
+      - mysql
+
+  frontend:
+    build: ../package_frontend
+    container_name: react_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:

@@ -1,0 +1,62 @@
+[
+  {
+    "test": "机器人认证",
+    "status": "PASS",
+    "details": "Token获取成功: eyJhbGciOiJIUzI1NiIs...",
+    "timestamp": "22:38:52"
+  },
+  {
+    "test": "机器人状态查询",
+    "status": "PASS",
+    "details": "状态: LOADING, 订单数: 2",
+    "timestamp": "22:38:53"
+  },
+  {
+    "test": "订单分配",
+    "status": "PASS",
+    "details": "订单1分配给5566, 地址: Admin Office",
+    "timestamp": "22:38:54"
+  },
+  {
+    "test": "机器人状态查询",
+    "status": "PASS",
+    "details": "状态: LOADING, 订单数: 2",
+    "timestamp": "22:38:56"
+  },
+  {
+    "test": "机器人接收订单",
+    "status": "FAIL",
+    "details": "HTTP 400: {\"detail\":\"没有找到待分配的订单\"}",
+    "timestamp": "22:38:57"
+  },
+  {
+    "test": "开始配送",
+    "status": "FAIL",
+    "details": "HTTP 400: {\"detail\":\"无效的操作\"}",
+    "timestamp": "22:38:58"
+  },
+  {
+    "test": "订单状态更新",
+    "status": "PASS",
+    "details": "状态更新为: DELIVERING",
+    "timestamp": "22:38:59"
+  },
+  {
+    "test": "二维码验证",
+    "status": "INFO",
+    "details": "模拟QR数据: {\"order_id\": 1, \"student_id\": 2, \"student_name\": \"张三\", \"delivery_building\": \"宿舍楼A\", \"delivery_room\": \"101\", \"package_type\": \"书籍\", \"signature\": \"abc123def456ghi789\"}",
+    "timestamp": "22:39:00"
+  },
+  {
+    "test": "配送完成",
+    "status": "PASS",
+    "details": "订单状态: DELIVERED",
+    "timestamp": "22:39:01"
+  },
+  {
+    "test": "机器人状态查询",
+    "status": "PASS",
+    "details": "状态: LOADING, 订单数: 1",
+    "timestamp": "22:39:02"
+  }
+]
