@@ -32,14 +32,44 @@ def generate_signed_payload(order_id, student_id, student_name=None, delivery_in
         "payload_data": payload_str  # 新增：返回解码后的数据用于存储
     }
 
-def generate_qr_code(data: dict) -> str:
-    """
-    生成二维码并返回 base64 编码 PNG 字符串
-    :param data: dict，通常包含 payload(base64字符串) + signature
-    :return: base64格式的 PNG 图像字符串（可直接用 <img src=...> 显示）
-    """
-    qr = qrcode.make(json.dumps(data, ensure_ascii=False))
-    buffer = BytesIO()
-    qr.save(buffer, format='PNG')
-    img_base64 = base64.b64encode(buffer.getvalue()).decode()
-    return f"data:image/png;base64,{img_base64}"
+def generate_simple_qr_code(order_id, student_id):
+    """生成简单的二维码 - 只包含订单ID和学生ID"""
+    # 简化的数据格式，只包含必要信息
+    qr_data = {
+        "order_id": order_id,
+        "student_id": student_id
+    }
+    
+    return json.dumps(qr_data, separators=(',', ':'))
+
+def generate_qr_code(signed_data):
+    """生成二维码图片 - 使用简化格式"""
+    from PIL import Image
+    import qrcode
+    
+    # 使用简化的数据格式
+    qr_content = signed_data.get('payload_data', '')
+    
+    # 创建二维码，使用更大的格子尺寸和更宽松的设置
+    qr = qrcode.QRCode(
+        version=1,           # 使用最小版本
+        error_correction=qrcode.constants.ERROR_CORRECT_L,  # 低纠错级别
+        box_size=15,         # 增大格子尺寸
+        border=8             # 增大边框
+    )
+    
+    qr.add_data(qr_content)
+    qr.make(fit=True)
+    
+    # 生成图片
+    img = qr.make_image(fill_color="black", back_color="white")
+    
+    # 转换为base64
+    import base64
+    import io
+    
+    buffer = io.BytesIO()
+    img.save(buffer, format='PNG')
+    img_str = base64.b64encode(buffer.getvalue()).decode()
+    
+    return f"data:image/png;base64,{img_str}"

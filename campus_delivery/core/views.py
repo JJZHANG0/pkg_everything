@@ -90,21 +90,16 @@ class DeliveryOrderViewSet(viewsets.ModelViewSet):
             'package_type': order.package_type
         }
         
-        # 生成完整的二维码数据
-        signed_data = generate_signed_payload(
-            order.id, 
-            order.student.id, 
-            order.student.username,
-            delivery_info
-        )
+        # 生成简单二维码数据
+        qr_content = generate_simple_qr_code(order.id, order.student.id)
         
         # 生成二维码图片
-        qr_base64 = generate_qr_code(signed_data)
+        qr_base64 = generate_qr_code({'payload_data': qr_content})
         
-        # 保存所有二维码相关数据
+        # 保存二维码相关数据
         order.qr_code_url = qr_base64
-        order.qr_payload_data = signed_data['payload_data']
-        order.qr_signature = signed_data['signature']
+        order.qr_payload_data = qr_content
+        order.qr_signature = None  # 简化版本不需要签名
         order.save()
 
     def update(self, request, *args, **kwargs):
@@ -711,7 +706,7 @@ class RobotViewSet(viewsets.ModelViewSet):
             return Response({"detail": "请提供二维码数据"}, status=400)
         
         try:
-            # 解析二维码数据
+            # 解析简单二维码数据
             if isinstance(qr_data, str):
                 # 如果是字符串，尝试解析JSON
                 try:
@@ -721,30 +716,12 @@ class RobotViewSet(viewsets.ModelViewSet):
             else:
                 qr_json = qr_data
             
-            # 从二维码数据中提取payload和signature
-            payload_b64 = qr_json.get("payload")
-            signature = qr_json.get("signature")
+            # 从二维码数据中提取订单信息
+            order_id = qr_json.get("order_id")
+            student_id = qr_json.get("student_id")
             
-            if not payload_b64 or not signature:
-                return Response({"detail": "二维码数据不完整"}, status=400)
-            
-            # 验证签名
-            try:
-                payload_str = base64.b64decode(payload_b64).decode()
-                expected_signature = hashlib.sha256((payload_str + settings.SECRET_KEY).encode()).hexdigest()
-                
-                if signature != expected_signature:
-                    return Response({"detail": "二维码签名验证失败"}, status=403)
-                    
-                payload = json.loads(payload_str)
-                order_id = payload.get("order_id")
-                student_id = payload.get("student_id")
-                
-                if not order_id or not student_id:
-                    return Response({"detail": "二维码数据缺少必要字段"}, status=400)
-                    
-            except Exception as e:
-                return Response({"detail": f"二维码数据解析失败: {str(e)}"}, status=400)
+            if not order_id or not student_id:
+                return Response({"detail": "二维码数据缺少必要字段"}, status=400)
             
             # 查找对应的订单
             try:
@@ -1390,7 +1367,7 @@ class RobotViewSet(viewsets.ModelViewSet):
                 )
                 return Response({"detail": "无法识别二维码，请重新拍照"}, status=400)
             
-            # 解析二维码数据
+            # 解析简单二维码数据
             try:
                 data = qr_data_list[0].data.decode("utf-8")
                 qr_json = json.loads(data)
@@ -1403,42 +1380,12 @@ class RobotViewSet(viewsets.ModelViewSet):
                 )
                 return Response({"detail": f"二维码数据格式错误: {str(e)}"}, status=400)
             
-            # 提取payload和signature
-            payload_b64 = qr_json.get("payload")
-            signature = qr_json.get("signature")
+            # 提取订单信息
+            order_id = qr_json.get("order_id")
+            student_id = qr_json.get("student_id")
             
-            if not payload_b64 or not signature:
-                return Response({"detail": "二维码数据不完整"}, status=400)
-            
-            # 验证签名
-            try:
-                payload_str = base64.b64decode(payload_b64).decode()
-                expected_signature = hashlib.sha256((payload_str + settings.SECRET_KEY).encode()).hexdigest()
-                
-                if signature != expected_signature:
-                    SystemLog.log_warning(
-                        f"机器人 {robot.name} 上传的二维码签名验证失败",
-                        log_type='QR_SCAN',
-                        robot=robot,
-                        data={'image_name': image.name}
-                    )
-                    return Response({"detail": "二维码签名验证失败"}, status=403)
-                    
-                payload = json.loads(payload_str)
-                order_id = payload.get("order_id")
-                student_id = payload.get("student_id")
-                
-                if not order_id or not student_id:
-                    return Response({"detail": "二维码数据缺少必要字段"}, status=400)
-                    
-            except Exception as e:
-                SystemLog.log_error(
-                    f"二维码验证失败: {str(e)}",
-                    log_type='QR_SCAN',
-                    robot=robot,
-                    data={'image_name': image.name}
-                )
-                return Response({"detail": f"二维码验证失败: {str(e)}"}, status=400)
+            if not order_id or not student_id:
+                return Response({"detail": "二维码数据缺少必要字段"}, status=400)
             
             # 查找对应的订单
             try:
